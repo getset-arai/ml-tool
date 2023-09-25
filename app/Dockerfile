@@ -35,4 +35,4 @@ RUN set -x && \
     php artisan key:generate && \
     chown -R www-data:www-data /var/www/html && \
     find /var/www/html/storage -type f -exec chmod 664 {} \; && \
-    find /var/www/html/storage -type d -exec chmod 770 {} \;
+    find /var/www/html/storage -type d -exec chmod 777 {} \;
