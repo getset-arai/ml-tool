@@ -27,6 +27,7 @@ RUN set -x && \
         fi \
     fi && \
     # resolve: The stream or file "/var/www/html/storage/logs/laravel.log" could not be opened in append mode: failed to open stream: Permission denied
+    mkdir -p /var/www/html/storage/logs /var/www/html/storage/app/public /var/www/html/storage/framework/{cache,sessions,testing,views} && \
     touch /var/www/html/storage/logs/laravel.log && \
     touch /var/log/cron.log && \
     # please remove this APP_KEY generate for your production usage
